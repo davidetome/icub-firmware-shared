@@ -91,6 +91,7 @@ static const eOmap_str_str_u08_t s_eomc_map_of_encoders[] =
     {"spichainof3", "eomc_enc_spichainof3", eomc_enc_spichainof3},    
     {"amo", "eomc_enc_amo", eomc_enc_amo},
     {"psc", "eomc_enc_psc", eomc_enc_psc},
+    {"pos", "eomc_enc_pos", eomc_enc_pos},
 
     {"none", "eomc_enc_none", eomc_enc_none},
     {"unknown", "eomc_enc_unknown", eomc_enc_unknown}
@@ -289,6 +290,11 @@ extern uint8_t eomc_encoder_get_numberofcomponents(eOmc_encoder_t encoder)
         {
             ret = 4;
         } break;
+        
+        case eomc_enc_pos:
+        {
+            ret = 1;
+        } break;        
         
         default:
         {
